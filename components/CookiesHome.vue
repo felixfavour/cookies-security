@@ -28,11 +28,11 @@
   const config = useRuntimeConfig()
 
   if (process.server) {
-    console.log('SERVER')
+    console.log('SERVER-SIDE')
   }
 
   if (process.client) {
-    console.log('CLIENT')
+    console.log('CLIENT-SIDE')
   }
 
   const logIn = () => {
