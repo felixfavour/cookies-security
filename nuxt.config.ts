@@ -4,4 +4,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     encKey: ''
   },
+  nitro: {
+    preset: 'node-server'
+  }
 })

@@ -27,6 +27,14 @@
   const password = ref('')
   const config = useRuntimeConfig()
 
+  if (process.server) {
+    console.log('SERVER')
+  }
+
+  if (process.client) {
+    console.log('CLIENT')
+  }
+
   const logIn = () => {
     storeEncryptedCookie()
     alert('Token generated')
