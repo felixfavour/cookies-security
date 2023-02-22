@@ -8,6 +8,10 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.2.2"
+    "nuxt": "^3.2.2",
+    "@types/js-cookie": "^3.0.3" 
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.1"
   }
 }
