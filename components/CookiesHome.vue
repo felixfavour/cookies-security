@@ -43,7 +43,6 @@
      * With diligence from attacker, whole system can be easily compromised.
      */
     const encryptedRandomJWT = CryptoJS.AES.encrypt(randomJWT, config.public.encKey).toString()
-    console.log(encryptedRandomJWT)
     
     /**
      * [secure] attribute set to true to ensure that cookie is inaccessible by unsecure(HTTP) domains/host
