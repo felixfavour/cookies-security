@@ -27,14 +27,6 @@
   const password = ref('')
   const config = useRuntimeConfig()
 
-  if (process.server) {
-    console.log('SERVER-SIDE')
-  }
-
-  if (process.client) {
-    console.log('CLIENT-SIDE')
-  }
-
   const logIn = () => {
     storeEncryptedCookie()
     alert('Token generated')
@@ -50,7 +42,7 @@
      * When an attacker knows where to look, information security is compromised by a step;
      * With diligence from attacker, whole system can be easily compromised.
      */
-    const encryptedRandomJWT = CryptoJS.AES.encrypt(randomJWT, config.encKey).toString()
+    const encryptedRandomJWT = CryptoJS.AES.encrypt(randomJWT, config.public.encKey).toString()
     console.log(encryptedRandomJWT)
     
     /**
